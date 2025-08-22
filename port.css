@@ -29,13 +29,13 @@
 
 
 
-   --shadow-glow: rgba(108, 99, 255, 0.3); */
+   --shadow-glow: rgba(108, 99, 255, 0.3); 
 
-   --shadow-glow-soft: rgba(0, 191, 166, 0.2); */
+   --shadow-glow-soft: rgba(0, 191, 166, 0.2); 
 
 
 
-  --text-color: #2a2a2a;
+  --text-color: #1e90ff;
 
   --text-muted: #6b7280;
 
@@ -154,13 +154,11 @@
       font-size: 4.5rem;
       white-space: nowrap;
       color: var(--primary-glow);
-      text-shadow:
-        /* 0 0 10px var(--primary-glow), */
-        /* 0 0 30px var(--primary-glow), */
-        /* 0 0 40px var(--primary-glow); */
-      margin-bottom: 0.5rem;
-      user-select: none;
+      text-shadow:none;
     }
+
+
+    
 
     #hero p {
       font-size: 1.3rem;
@@ -201,17 +199,19 @@
 
 
     /* Personal Image */
-    #hero img.personal-photo {
-      border-radius: 100%;
-      width: 300px;
-      height: 300px;
-      object-fit: cover;
-      box-shadow:
-        0 0 15px var(--primary-glow),
-        0 0 30px var(--secondary-glow);
-      margin-bottom: 1.5rem;
-      user-select: none;
-    }
+
+   #hero img.personal-photo {
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  box-shadow:
+    0 0 15px var(--primary-glow),
+    0 0 30px var(--secondary-glow);
+  margin-bottom: 1.5rem;
+  user-select: none;
+}
+
 
     /* SECTIONS GENERAL */
     section {
@@ -486,8 +486,8 @@
 
     #contact label {
       font-weight: 6600;
-       /* color: var(--primary-glow); */ */
-      user-select: none;
+       /* color: var(--primary-glow); */ 
+      /* user-select: none; */
     }
 
     #contact input,
@@ -522,19 +522,19 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       box-shadow:
-         0 0 20px var(--primary-glow), */
-         0 0 40px var(--secondary-glow); */
-      transition: background 0.4s ease;
+         0 0 20px var(--primary-glow), 
+         0 0 40px var(--secondary-glow); 
+      transition: 0.4s ease;
       user-select: none;
     }
 
     #contact button:hover {
       background: var(--secondary-glow);
       box-shadow:
-         0 0 40px var(--secondary-glow), */
-        0 0 40px var(--primary-glow); */
+         0 0 40px var(--secondary-glow), 
+        0 0 40px var(--primary-glow); 
     }
-
+    
     /* RESPONSIVE */
     @media (max-width: 600px) {
       #hero h1 {
@@ -547,3 +547,171 @@
         gap: 1.3rem;
       }
     }
+
+
+
+
+
+    
+    /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--primary-glow);
+}
+
+/* HERO SECTION */
+#hero {
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+#hero img.personal-photo {
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  box-shadow:
+    0 0 15px var(--primary-glow),
+    0 0 30px var(--secondary-glow);
+  margin-bottom: 1.5rem;
+  user-select: none;
+}
+
+#hero h1 {
+  font-size: 4rem;
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* BUTTON STYLE */
+button, .btn {
+  background: var(--primary-glow);
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px var(--primary-glow);
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Large tablets and small laptops */
+@media (max-width: 1024px) {
+  #hero h1 {
+    font-size: 3.5rem;
+  }
+  #hero p {
+    font-size: 1.1rem;
+  }
+  nav ul {
+    gap: 1.5rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  nav {
+    flex-direction:row;
+    gap: 1rem;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: end;
+    gap: 1.2rem;
+  }
+  #hero {
+    padding: 3rem 1.5rem;
+  }
+  #hero img.personal-photo {
+    width: 220px;
+    height: 220px;
+  }
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+  #hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  #hero h1 {
+    font-size: 2rem;
+  }
+  #hero p {
+    font-size: 0.95rem;
+  }
+  nav ul {
+    flex-direction: row;
+    gap: 0.8rem;
+  }
+  #hero img.personal-photo {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  #hero h1 {
+    font-size: 1.6rem;
+  }
+  #hero p {
+    font-size: 0.85rem;
+  }
+  button, .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
