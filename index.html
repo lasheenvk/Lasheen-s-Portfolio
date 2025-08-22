@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LASHEEN | Futuristic Portfolio</title>
+  <link rel="stylesheet" href="/port.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+   
+  <!-------------------------------------------------- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!------------------------------------------------- Background Canvas -->
+  <canvas id="background-canvas"></canvas>
+
+  <!------------------------------------------------ NAVIGATION -->
+  <nav>
+    <div class="logo">LASHEEN</div>
+   <ul>
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#portfolio">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!------------------------------------------------ HERO SECTION ---------------------------->
+  <section id="hero">
+    <img src="my.jpg" alt="Lasheen" class="personal-photo" />
+    <h1>Lasheen Ahammed.vk</h1>
+    <p>Building the future of the web through innovation, design and technology.</p>
+    <button class="btn" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Get in Touch</button>
+  </section>
+
+  <!------------------------------------------------------ ABOUT SECTION -->
+  <section id="about">
+    <h2>About Me</h2>
+  <p>Hi, I’m Lasheen, a passionate Full-Stack Developer and designer who loves crafting visually stunning, user-friendly, and high-performing digital experiences. Blending creativity with clean code, I specialize in futuristic design, responsive development, and scalable solutions—turning ideas into impactful products that stand out in today’s digital world.</p>
+
+
+     <!--------------------------------------------------- SOCIAL MEDIA --------------------------------------------------------->
+    <div id="social-media" aria-label="Social media links">
+      <a href="https://github.com/lasheenvk" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/lasheen-ahammed-685738360?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/lasheeenn?igsh=MWhyMWxxaXF2YWZrNA=="target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  <!--=========================================== SKILLS SECTION -------------------------------------->
+  <section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skill">
+      <div class="skill-name">HTML</div>
+      <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 95%;">95%</div>
+      </div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">CSS</div>
+      <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 90%;">90%</div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">JavaScript</div>
+      <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 80%;">80%</div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">bootstrap</div>
+      <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 45%;">35%</div>
+      </div>
+    </div>
+
+    <!-- <div class="skill"> -->
+      <!-- <div class="skill-name">C Language</div> -->
+      <!-- <div class="progress-bar-container"> -->
+        <!-- <div class="progress-bar" style="width: 17%;">10%</div> -->
+      <!-- </div> -->
+    </div>
+     <!--------------------------------------- PORTFOLIO SECTION ----------------------------------------------------->
+  <section id="portfolio">
+    <h2> Projects</h2>
+    <div>
+      <article class="card" tabindex="0" role="listitem" aria-label="Project just dail ">
+        <img src="just dail clone.jpg"alt="Screenshot of Project Just Dail Clone" />
+        <div class="card-body">
+          <h3 class="card-title">Project clone</h3>
+          <p class="card-text">Developed a responsive JustDial clone web application featuring interactive UI and categorized service listings. Implemented using modern web technologies to simulate a real-world service directory, ensuring smooth navigation and a user-friendly experience. </p>
+        </div>
+      </article>
+
+      <article class="card" tabindex="0" role="listitem" aria-label="W3 SCHOOL NAVIGATION BAR ">
+        <img src="W3 nav bar screen shot .jpg" alt="Screenshot of Project Quantum" />
+        <div class="card-body">
+          <h3 class="card-title">W3 SCHOOL NAVIGATION BAR </h3>
+          <p class="card-text">This project is a simple yet functional clone of the W3Schools navigation bar, built using HTML and CSS. It helped me practice creating structured navigation menus, applying styling for a clean layout, and understanding the basics of responsive design.</p>
+        </div>
+      </article>
+    </div>
+   <!------------------------------------------ CONTACT SECTION --------------------------------------------------------->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+      <input type="hidden" name="access_key" value="c9cf2a08-00cf-46de-b5ae-e638bb744c72">
+    <form id="contact_form" enctype="text/plain" aria-label="Contact form">
+      <label for="name">Name</label>
+      <input id="from_name" type="text" id="name" name="name" required aria-required="true" placeholder="Your name" />
+
+      <label for="email">Email</label>
+      <input id="email_id" type="email" id="email" name="email" required aria-required="true" placeholder="your.email@example.com" />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Your message"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</html>
+</body>
+
+  <script>
+    // Animate progress bars on scroll
+    function animateProgressBars() {
+      const bars = document.querySelectorAll('.progress-bar');
+      bars.forEach(bar => {
+        const width = bar.style.width;
+        bar.style.width = '0';
+        setTimeout(() => {
+          bar.style.width = width;
+        }, 200);
+      });
+    }
+
+    window.addEventListener('load', animateProgressBars);
+
+    // Simple background canvas animation (optional)
+    const canvas = document.getElementById('background-canvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.radius = 1 + Math.random() * 1.5;
+        this.speedX = (Math.random() - 0.5) * 0.3;
+        this.speedY = (Math.random() - 0.5) * 0.3;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x < 0 || this.x > width) this.speedX *= -1;
+        if (this.y < 0 || this.y > height) this.speedY *= -1;
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(0, 255, 247, 0.3)';
+        ctx.shadowColor = 'rgba(0, 255, 247, 0.7)';
+        ctx.shadowBlur = 4;
+        ctx.fill();
+      }
+    }
+
+    function initParticles() {
+      particles = [];
+      for (let i = 0; i < 60; i++) {
+        particles.push(new Particle());
+      }
+    }
+    initParticles();
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    // Smooth scrolling for nav links
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelectorAll('nav ul li a').forEach(a => a.classList.remove('active'));
+        link.classList.add('active');
+        const targetId = link.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+          document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    })
+</script>
+<footer>
+<p>© 2025 Lasheen Ahammed VK. All Rights Reserved.</p>
+</footer>
