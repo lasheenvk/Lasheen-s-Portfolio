@@ -653,7 +653,7 @@ button:hover, .btn:hover {
   #hero p {
     font-size: 1.1rem;
   }
-  nav ul {
+  nav ul { display: none;
     gap: 1.5rem;
   }
 }
@@ -664,7 +664,7 @@ button:hover, .btn:hover {
     flex-direction:row;
     gap: 1rem;
   }
-  nav ul {
+  nav ul { display: none;
     flex-wrap: wrap;
     justify-content: end;
     gap: 1.2rem;
